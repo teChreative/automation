@@ -16,7 +16,7 @@ driver.find_element(
 # Find and enter into username field
 time.sleep(2)
 driver.find_element(
-    By.CSS_SELECTOR, '#login-canvas > div > div > form > div:nth-child(1) > div > input').send_keys('nathanielejones@hotmail.com')
+    By.CSS_SELECTOR, '#login-canvas > div > div > form > div:nth-child(1) > div > input').send_keys('')
 
 # Find and enter password
 time.sleep(2)

@@ -27,7 +27,7 @@ driver.find_element(
 time.sleep(2)
 driver.find_element(By.CSS_SELECTOR, '#login_button').click()
 
-# find and select Settings https://www.tutorialspoint.com/how-can-i-perform-mouse-hover-action-in-selenium-python
+# find and select Settings
 time.sleep(2)
 a = ActionChains(driver)
 m = driver.find_element(

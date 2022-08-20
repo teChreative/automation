@@ -8,9 +8,41 @@ import time
 
 # 1 - go to plex.tv
 driver = webdriver.Chrome()
+driver.maximize_window()
 driver.get('https://www.plex.tv/')
 
+driver.find_element(
+    By.CSS_SELECTOR, '#universal-search-input').send_keys('star wars')
 
+time.sleep(2)
+# hoverSTARWARS = ActionChains(driver)
+# SW = driver.find_element(
+#     By.CSS_SELECTOR, '#universal-search-item-0')
+# hoverSTARWARS.move_to_element(SW).perform()
+
+# hoverSTARWARS = ActionChains(driver)
+# SW = driver.find_element(By.LINK_TEXT, 'Star Wars')
+# hoverSTARWARS.move_to_element(SW).perform()
+
+driver.find_element(
+    By.CSS_SELECTOR, '#universal-search-menu > div')
+
+driver.find_element(
+    By.CSS_SELECTOR, '#universal-search-menu > div > div')
+
+driver.find_element(
+    By.CSS_SELECTOR, '#universal-search-menu > div > div > div')
+
+myList = driver.find_element(
+    By.CSS_SELECTOR, '#universal-search-menu > div > div > div > div:nth-child(2)')
+
+for movie in myList:
+    print(movie.text)
+    if movie.text == "Star Wars":
+        movie.click()
+        break
+
+"""
 # 2 - find and click burger
 driver.find_element(
     By.CSS_SELECTOR, '#plex-global-nav > header > div.fresnel-lessThan-md.nav.menuContainer > button').send_keys(Keys.RETURN)
@@ -22,11 +54,11 @@ driver.find_element(By.CSS_SELECTOR, '#plex-global-nav > header > div.mobile-nav
 # 4 - enter username into field
 time.sleep(2)
 driver.find_element(
-    By.CSS_SELECTOR, '#email').send_keys('boog')
-"""
+    By.NAME, 'email').send_keys('boog')
+
 # 3 - enter password into field
 time.sleep(2)
-driver.find_element(By.CSS_SELECTOR, '').send_keys(Keys.RETURN)
+driver.find_element(By.CSS_SELECTOR, '#password').send_keys('password')
 
 # 4 - hover over OPEN PLEX button
 time.sleep(2)

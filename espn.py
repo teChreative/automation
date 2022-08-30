@@ -22,7 +22,7 @@ time.sleep(2)
 # TENNIS - #global-nav > ul > li.sports.menu-tennis.hover > div > ul > li:nth-child(1) > a
 driver.find_element(
     By.CSS_SELECTOR, '#global-nav > ul > li.none.more.hover > div > ul > li.sports.menu-boxing > a').send_keys(Keys.RETURN)
-time.sleep(3)
+time.sleep(2)
 
 # 4 - close browser
 driver.close()

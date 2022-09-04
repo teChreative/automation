@@ -20,5 +20,3 @@ else:
     ydv = yt.streams.get_highest_resolution()
     yda.download('/Users/folder/Documents/YT/audio')
     ydv.download('/Users/folder/Documents/YT/video')
-
-# yd.download('/Users/NEJ/Documents/YT')
